@@ -1,38 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12a2e862-c6cd-4292-9817-d17616353285" name="Default Changelist" comment="" />
+    <list default="true" id="d0a150be-4901-46df-9f83-5a03538a92a3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1a8VFnREAPu2WHQzEEO1pVgKqZh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="12a2e862-c6cd-4292-9817-d17616353285" name="Default Changelist" comment="" />
-      <created>1586117106432</created>
+      <changelist id="d0a150be-4901-46df-9f83-5a03538a92a3" name="Default Changelist" comment="" />
+      <created>1586117123432</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1586117106432</updated>
-      <workItem from="1586117115989" duration="122000" />
+      <updated>1586117123432</updated>
+      <workItem from="1586117124598" duration="353000" />
     </task>
     <servers />
   </component>
