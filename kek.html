@@ -2,452 +2,145 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="ООО Ростра-Питер Санкт-Петербург, огнезащита ПИРО-СЕЙФ, строительные решения, общестроительные работы">
-    <meta name="description" content="С 2011 г. «ООО Ростра-Питер» занимается огнезащитой, разработкой проектной документации и осуществлением строительных работ в Санкт-Петербурге и ЛО. Основа нашей компании – это профессионализм и качество высококвалифицированных бригад альпинистов, монтажников, сварщиков, моляров осуществляющих все виды работ по изготовлению и монтажу дверей, противопожарных перегородок, по окраске кабелей, металлических и деревянных конструкций. Стаж работы наших сотрудников от 5 до 11 лет, что позволило им приобрести большой опыт в сфере пожарной безопасности.">
-    <meta name="yandex-verification" content="4907224b2974e410" />
-    <meta name="robots" content="index,nofollow" />
-    <title>Главная - ООО РОСТРА-ПИТЕР</title>
+    <!-- --><meta name="keywords" content="ваши ключевые слова">
+    <!-- --><meta name="description" content="описание вашего продукта / вашего marketplace">
+    <!-- --><title>Ваш заголовок сайта</title>
 
-    <!--link rel="prefetch" href="./css/images/partner-logo-hover.png"-->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.css">
     <link rel="stylesheet" href="./css/jquery.bxslider.css">
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <!-- --><link rel="shortcut icon" type="image/your_site_icon" href="favicon.ico">
     <script src="js/jquery-1.9.1.min.js"></script>
-    <!-- Fancybox и его настройка -->
-    <script src="js/jquery.fancybox.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.fancybox_one').fancybox({
-                padding: 0,
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                afterShow: function() {
-                    $(".fancybox-close").addClass('fancybox-close__two');
-                    $("#fancy_feedback_input_name").focus();
-                }
-            });
-            $('.fancybox_thx').fancybox({
-                padding: 0,
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                afterShow: function() {
-                    $(".fancybox-close").addClass('fancybox-close__two');
-                    setTimeout(function(){
-                        $.fancybox.close();
-                    },3000);
-                }
-            });
-            $('.fancybox__licences').fancybox({
-                padding: 0,
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                afterShow: function() {
-                    $(".fancybox-close").addClass('fancybox-close__two');
-                }
-            });
-        });
-    </script>
-    <!-- Обработка и отправка форм -->
-    <script src="js/fancybox_forms.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(document).keypress(function(e) {
-                if (e.which === 13) { // на нажатие энтера
-                    //Всплывающая обратная связь
-                    if ($("#fancy_feedback_input_name").is(":focus")){
-                        $("#fancy_feedback_input_phone").focus();
-                    } else if ($("#fancy_feedback_input_phone").is(":focus")){
-                        $('#fancy_feedback_button').trigger('click');
-                    }
-                }
-            });
-
-            $("body").on('click','.form_one_btn',function(){ // на отправку
-                var name = $(".form_one_btn").parent().find(".formName");
-                var phone = $(".form_one_btn").parent().find(".formPhone");
-                if(validateName(name) && validatePhone(phone)){
-                    var formData = {FORMID: 1, NAME: name.val(), PHONE: phone.val(), CUR_PAGE:"Главная", PAGE_LINK:document.URL};
-                    console.log(formData);
-                    $.ajax({
-                        url : "/php/feedback.php",
-                        type: "POST",
-                        data : formData,
-                        success: function(data, textStatus, jqXHR)
-                        {
-                            name.val("Имя");
-                            phone.val("Телефон");
-                            $('#form_success_link').trigger('click');
-                        },
-                        error: function (jqXHR, textStatus, errorThrown)
-                        {
-                            console.log("post error")
-                        }
-                    });
-                }
-            });
-        })
-    </script>
-    <!-- bxSlider и его настройка-->
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            var slider = $('.projects_carousel_bx').bxSlider({
-                auto: true,
-                autoHover: true,
-                slideWidth: 320,
-                minSlides: 3,
-                maxSlides: 3,
-                moveSlides: 1,
-                pager:false,
-            });
-        });
-    </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(57168145, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/57168145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156840536-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-156840536-1');
-    </script>
-
-
 </head>
 <body>
+  <div id="header">
+      <div class="header__top">
+          <div class="wrap">
+              <div class="padding">
+                  <div class="all">
+                      <div class="menu">
+                          <div class="menu__item">
+                              <a href="#about">о вас</a>
+                          </div>
+                          <div class="menu__item">
+                              <a href="#services">ваши услуги</a>
+                          </div>
+                      </div>
+                      <div class="header__top__info">
+                          <!-- --><p>Ваше месторасполажение, если такое есть</p>
+                          <!-- --><p>Название вашего бизнеса</p>
+                          <!-- --><p><a href="mailto:rostrapiter@gmail.com">Ваша почта</a></p>
+                          <!-- --><p style="font-size: 15pt">Ваш номер телефона</p>
+                          <!-- p style="font-size: 15pt">+7 (812) 335 33 15</p -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="header__center">
+          <div class="wrap">
+              <div class="padding">
+                  <div class="main__logo">
+                      <p>Название</p><p>компании</p><!-- <p>еще слова</p> -->
+                  </div>
+                  <div class="main__logo__description">
+                      <p>Ваша</p><p>специализация</p><!-- <p>еще слова</p> -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-<div id="header">
-    <div class="header__top">
-        <div class="wrap">
-            <div class="padding">
-                <div class="all">
-                    <div class="menu">
-                        <div class="menu__item">
-                            <a href="#about">о нас</a>
-                        </div>
-                        <div class="menu__item">
-                            <a href="#services">услуги</a>
-                        </div>
-                        <div class="menu__item">
-                            <a href="/reviews.html">отзывы</a>
-                        </div>
-                    </div>
-                    <div class="header__top__info">
-                        <p>Санкт-Петербург, Шлиссельбургский пр-т, д.3</p>
-                        <p>Бизнес-центр "Эврика", оф.65</p>
-                        <p><a href="mailto:rostrapiter@gmail.com">rostrapiter@gmail.com</a></p>
-                        <p style="font-size: 15pt">+7 (911) 944 34 34</p>
-                        <p style="font-size: 15pt">+7 (812) 335 33 15</p>
-                        <p style="font-size: 15pt">+7 (911) 912 34 34</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="header__center">
-        <div class="wrap">
-            <div class="padding">
-                <div class="main__logo">
-                    <p>ростра</p><p>питер</p>
-                </div>
-                <div class="main__logo__description">
-                    <p>строительство и пожарная</p><p>безопасность</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="header__callback">
-        <div class="wrap">
-            <div class="padding">
-                <a class="button fancybox_one" href="#form_one" >заказать обратный звонок</a>
-            </div>
-        </div>
+  <div id="about" class="content__block" style="max-height: none">
+      <div class="wrap">
+          <div class="padding">
+              <h1>О ВАС</h1>
+              <div id="partners">
+                  <a target="_blank" href="https://ru.svt.de"><div class="partners__logo"></div></a>
+                  <div class="partners__description">
+                      Можно и без отступа сделать, кстати<br>
+                      Большое или не очень описание вашего продукта
+                      большое или не очень описание вашего продукта
+                      большое или не очень описание вашего продукта<br>
+                      Большое или не очень описание вашего продукта
+                      большое или не очень описание вашего продукта
+                      большое или не очень описание вашего продукта<br><br>
+                      Возможно, какие-то дополнительные сведения.
+                  </div>
+              </div>
 
-        <div id="form_one">
-            <div class="fancy__title">Заказ обратного звонка</div>
-            <div class="form_element">
-                <input type="text" class="formName" id="fancy_feedback_input_name" value="Имя" onfocus="if (this.value == 'Имя') {this.value = '';}" onblur="if (this.value == '') {this.value ='Имя';}" required>
-            </div>
-            <div class="form_element">
-                <input type="text" class="formPhone" id="fancy_feedback_input_phone" value="Телефон" onfocus="if (this.value == 'Телефон') {this.value = '';}" onblur="if (this.value == '') {this.value ='Телефон';}" required>
-            </div>
-            <div class="formButton form_one_btn" id="fancy_feedback_button">жду звонка</div>
-        </div>
+              <div class="about__contents">
+                  <p>
+                    Тут можно еще что-то написать, возможно,<br>
+                    большинство картинок актуальнее, тоже сделаем, не проблема
+                  </p>
+                  <p>
+                    Можно не отделять путым местом эти два параграфа<br>
+                    Тут можно еще что-то написать, возможно,<br>
+                    большинство картинок актуальнее, тоже сделаем, не проблема
+                  </p>
 
-    </div>
-</div>
-<!--<div class="tmp">-->
-<!--    <div class="wrap">-->
-<!--        <div class="padding">-->
-<!--            <div class="tmp__message">-->
-<!--                <div class="tmp__p">-->
-<!--                    Уважаемый посетитель, к сожалению, на данный момент сайт находится в разработке!-->
-<!--                </div>-->
-<!--                <div class="tmp__p">-->
-<!--                    Вы можете свзяться с нами по любому из телефонов, указанных в контактах, или заказать обратный звонок при помощи формы выше-->
-<!--                </div>-->
-<!--                <div class="tmp__p">-->
-<!--                    Приносим извинения за временные неудобства =(-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<div id="about" class="content__block" style="max-height: none">
-    <div class="wrap">
-        <div class="padding">
-            <h1>О НАС</h1>
-            <div id="partners">
-                <a target="_blank" href="https://ru.svt.de"><div class="partners__logo"></div></a>
-                <div class="partners__description">
-                    С середины 70-х годов фирма SVT разрабатывает
-                    противопожарные продукты и системыпод торговой маркой
-                    ПИРО-СЕЙФ. Ассортимент предлагаемой продукции включает
-                    противопожарные покрытия для кабеля, для строительных
-                    конструкций из стали и дерева, огнестойкие переборки,
-                    уплотнения для строительных швов и манжеты для труб.<br><br>
-                    Наша же компания является ее представителем на северо-западе России.
-                </div>
-            </div>
+              </div>
+          </div>
+      </div>
 
-            <div class="about__contents">
-                <p>
-                    Строительная компания «Ростра-Питер» выполняет весь
-                    комплекс строительных работ - от создания проектной
-                    документации, выполнения общестроительных работ,
-                    монтажа стальных, бетонных, железобетонных и
-                    металлических конструкций до монтажа и обслуживания
-                    внутренних инженерных коммуникаций и противопожарных систем.
-                </p>
-                <p>
-                    Компания «Ростра-Питер» обладает производственными
-                    мощностями и материальной базой для выполнения всех
-                    строительно-монтажных работ и монтажа технологического
-                    оборудования, но также может выступить в роли
-                    генерального подрядчика на строительные работы.
-                </p>
+  </div>
 
-            </div>
-        </div>
-    </div>
 
-</div>
-<div id="services" class="content__block">
-    <div class="wrap">
-        <div class="padding">
-            <h1>НАШИ УСЛУГИ</h1>
+  <div id="work__types" class="content__block" style="max-height: 2000px">
+      <div class="wrap">
+          <div class="padding">
+              <h1>ВИДЫ ТОВАРОВ</h1>
+              <div class="work__subtype">
+                  <h2>Первый вид</h2>
+                  <ul>
+                      <li>Первый подвид</li>
+                      <li>Второй подвид</li>
+                      <li>Третий подвид</li>
+                  </ul>
+              </div>
+              <div class="work__subtype">
+                  <h2>Второй вид</h2>
+                  <ul>
+                      <li>Первый подвид</li>
+                      <li>Второй подвид</li>
+                      <li>Третий подвид</li>
+                  </ul>
+              </div>
+              <div class="work__subtype">
+                  <h2>Третий вид</h2>
+                  <ul>
+                      <li>Первый подвид</li>
+                      <li>Второй подвид</li>
+                      <li>Третий подвид</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
 
-            <div class="services__contents">
-                <a href="/complex_proof.html">
-                    <div class="services__item">
-                        Комплексная защита конструкций,<br>зданий и сооружений
-                    </div>
-                </a>
-                <a href="/wood_proof.html">
-                    <div class="services__item">
-                        Огнезащита деревянных конструкций
-                    </div>
-                </a>
-                <a href="/cable_proof.html">
-                    <div class="services__item">
-                        Огнезащита кабелей
-                    </div>
-                </a>
-                <a href="/doors_fire.html">
-                    <div class="services__item">
-                        Установка противопожарных дверей
-                    </div>
-                </a>
-                <a href="/vent_proof.html">
-                    <div class="services__item">
-                        Огнезащита воздуховодов
-                    </div>
-                </a>
-                <a href="/metal_proof.html">
-                    <div class="services__item">
-                        Огнезащита металлических конструкций
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="projects" class="content__block">
-    <div class="wrap">
-        <div class="padding">
-            <h1>НАШИ ПРОЕКТЫ</h1>
-            <div class="projects__carousel">
-                <ul class="projects_carousel_bx">
-                    <li id="projects_slide_1">
-                        <div class="p1" style="background-image:url('images/projects-1.png')"></div>
-                        <div class="slide_signage">
-                            <h3>Северо-Западная ТЭЦ</h3>
-                            <p>2007-2018г.</p>
-                        </div>
-                    </li>
-                    <li id="projects_slide_2">
-                        <div class="p1" style="background-image:url('images/projects-2.png')"></div>
-                        <div class="slide_signage">
-                            <h3>ЦБК в г. Светогорске</h3>
-                            <p>2008-2010г.</p>
-                        </div>
-                    </li>
-                    <li id="projects_slide_3">
-                        <div class="p1" style="background-image:url('images/projects-3.png')"></div>
-                        <div class="slide_signage">
-                            <h3>Завод «ПЕТМОЛ»</h3>
-                            <p>2008г.</p>
-                        </div>
-                    </li>
-                    <li id="projects_slide_4">
-                        <div class="p1" style="background-image:url('images/projects-4.png')"></div>
-                        <div class="slide_signage">
-                            <h3>БЦ "Австрийский"</h3>
-                            <p>2011-2012г.</p>
-                        </div>
-                    </li>
-                    <li id="projects_slide_5">
-                        <div class="p1" style="background-image:url('images/projects-5.png')"></div>
-                        <div class="slide_signage">
-                            <h3>БЦ "Линкор"</h3>
-                            <p>2010-2011г.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="projects__buttons">
-                <a class="button" href="/projects.html" >Узнать больше</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="work__types" class="content__block" style="max-height: 2000px">
-    <div class="wrap">
-        <div class="padding">
-            <h1>ВИДЫ РАБОТ</h1>
-            <div class="work__subtype">
-                <h2>Организационные работы</h2>
-                <ul>
-                    <li>Проектирование зданий и сооружений 1 и 2 уровня ответственности</li>
-                    <li>Разработка разделов проектной документации на строительство зданий и сооружений и их комплексов</li>
-                    <li>Архитектурно-строительные решения</li>
-                    <li>Осуществление функций Генерального проектировщика</li>
-                    <li>Осуществление функций Генерального подрядчика</li>
-                </ul>
-            </div>
-            <div class="work__subtype">
-                <h2>Общестроительные работы</h2>
-                <ul>
-                    <li>Монтаж стальных конструкций</li>
-                    <li>Монтаж бетонных и железобетонных конструкций</li>
-                    <li>Каменные работы</li>
-                    <li>Работы по устройству внутренних инженерных систем и оборудования</li>
-                    <li>Устройство специальных видов полов</li>
-                    <li>Монтаж легких ограждающих конструкций</li>
-                </ul>
-            </div>
-            <div class="work__subtype">
-                <h2>Противопожарные работы</h2>
-                <ul>
-                    <li>Производство работ по монтажу, ремонту и обслуживанию средств обеспечения пожарной безопасности зданий и сооружений</li>
-                    <li>Монтаж, ремонт и обслуживание заполнений проемов в противопожарных преградах</li>
-                    <li>Производство работ по огнезащите материалов, изделий и конструкций</li>
-                    <li>Разработка мероприятий по предотвращению пожаров</li>
-                    <li>Выполнение проектных работ по средствам обеспечения пожарной безопасности зданий и сооружений</li>
-                    <li>Проведение экспертизы организационных и технических решений по обеспечению пожарной безопасности</li>
-                    <li>Гарантийное и пост гарантийное обслуживание</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="licences">
-    <div class="wrap">
-        <div class="padding">
-            <div class="licences__text">
-                Имеются все необходимые лицензии на проектирование и строительство зданий и сооружений
-            </div>
-            <a class="button fancybox__licences" href="#licences__window">наши лицензии</a>
-        </div>
-    </div>
-</div>
-<div id="licences__window">
-    <div class="fancy__title_2">Наши лицензии</div>
-    <div class="licences__window__contents">
-        <ul class="licences__bx">
-            <li>
-                <div class="licences__page" style="background-image: url('images/MCHS-1.png')"></div>
-            </li>
-            <li>
-                <div class="licences__page" style="background-image: url('images/MCHS-2.png')"></div>
-            </li>
-        </ul>
-        <div class="licences__download"><a target="_blank" href="/licences.pdf">Скачать файл в .pdf</a></div>
-    </div>
-</div>
-<!--<div id="partners">-->
-<!--    <div class="wrap">-->
-<!--        <div class="padding">-->
-<!--            <h1>ПАРТНЕРЫ</h1>-->
-
-<!--            <a target="_blank" href="https://ru.svt.de"><div class="partners__logo"></div></a>-->
-<!--            <div class="partners__description">-->
-<!--                С середины 70-х годов фирма SVT разрабатывает-->
-<!--                противопожарные продукты и системыпод торговой маркой-->
-<!--                ПИРО-СЕЙФ. Ассортимент предлагаемой продукции включает-->
-<!--                противопожарные покрытия для кабеля, для строительных-->
-<!--                конструкций из стали и дерева, огнестойкие переборки,-->
-<!--                уплотнения для строительных швов и манжеты для труб.<br><br>-->
-<!--                Наша же компания является ее представителем на северо-западе России.-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<div id="footer">
-    <div class="wrap">
-        <div class="padding">
-            <div class="footer__info">
-                <div class="footer__info__element">тел/факс: 8(812) 335-33-15</div>
-                <div class="footer__info__element">моб: 8(911) 912-34-34</div>
-                <div class="footer__info__element">моб: 8(911) 944-34-34</div>
-                <div class="footer__info__element">Skype: rostrapiter</div>
-                <div class="footer__info__element"><a href="mailto:rostrapiter@gmail.com">rostrapiter@gmail.com</a></div>
-            </div>
-            <div class="footer__promo">
-                <div class="footer__logo">
-                    <a href="/">
-                        <p>ростра</p><p>питер</p>
-                    </a>
-                </div>
-                <div class="footer__logo__description">
-                    <p>строительство</p><p>пожарная безопасность</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="form_thanks">
-    <div class="thanks__contents">
-        <p>Спасибо!</p><p>Ваша заявка успешно отправлена,</p><p>вскоре мы свяжемся с вами!</p>
-    </div>
-</div>
-<a id="form_success_link" class="fancybox_thx" href="#form_thanks" style="display: none">ссылка</a>
-
+  <div id="footer">
+      <div class="wrap">
+          <div class="padding">
+              <div class="footer__info">
+                  <div class="footer__info__element">тел: ваш рабочий телефон</div>
+                  <div class="footer__info__element">моб: ваш мобильный телефон</div>
+                  <div class="footer__info__element">Skype/Discord: ваш skype/discord вдруг вам это надо</div>
+                  <div class="footer__info__element"><a href="mailto:rostrapiter@gmail.com">ваша почта</a></div>
+              </div>
+              <div class="footer__promo">
+                  <div class="footer__logo">
+                      <a href="/">
+                          <p>название</p><p>компании</p>
+                      </a>
+                  </div>
+                  <!--div class="footer__logo__description">
+                      <p>специализация</p><p>вашего бизнеса</p><p>можем ее убрать</p>
+                  </div-->
+              </div>
+          </div>
+      </div>
+  </div>
 </body>
 </html>
